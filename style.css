@@ -1,0 +1,53 @@
+:root {
+  --clr-violet: #666ca3;
+  --clr-dark-violet: #13183f;
+  --clr-gray: #83869a;
+  --clr-pink: #f74780;
+  --clr-rose: #ffa7c3;
+  --clr-white: #ffffff;
+
+  --px-base: 16px;
+  --px-s: 24px;
+  --px-m: 32px;
+  --px-l: 40px;
+  --px-xl: 56px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.outer-container {
+  padding-inline: var(--px-base);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-block: 16px;
+
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--clr-dark-violet);
+}
+.company-name {
+  align-self: center;
+}
+.button-header {
+  font-family: inherit;
+  font-size: 18px;
+
+  color: var(--clr-white);
+
+  background-color: var(--clr-dark-violet);
+  border: none;
+  border-radius: var(--px-m);
+  padding-block: var(--px-base);
+  padding-inline: var(--px-m);
+}
+h1 {
+  font-size: var(--px-l);
+  font-weight: 800;
+}
