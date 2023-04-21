@@ -41,6 +41,7 @@ html {
   font-weight: 800;
   color: var(--clr-dark-violet);
 }
+
 .company-name {
   align-self: center;
 }
@@ -101,8 +102,12 @@ svg {
   margin-top: var(--px-xl);
   margin-bottom: var(--px-m);
 }
-.image-company-info {
-  margin-left: -3rem;
+
+.mobile-img {
+  object-fit: contain;
+
+  width: 100%;
+  height: 100%;
 }
 .topic-container {
   padding-bottom: calc(var(--px-l) * 2);
@@ -148,4 +153,51 @@ svg {
   border-radius: var(--px-m);
   padding-block: 1rem;
   padding-inline: var(--px-m);
+}
+.desktop-img {
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .outer-container {
+    padding-inline: 3rem;
+  }
+  .heading-container {
+    display: flex;
+    border: #f02aa6 solid 3px;
+  }
+  .title-container {
+    max-width: 59%;
+  }
+  .image-container {
+    border: #ff6f48 solid 4px;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .desktop-image {
+    display: block;
+  }
+  .topic-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .course-list-header {
+    margin-top: 3rem;
+  }
+  h2 {
+    padding-inline: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .topic-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .course-list {
+    padding: 4rem;
+  }
 }
