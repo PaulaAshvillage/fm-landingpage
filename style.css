@@ -154,29 +154,30 @@ svg {
   padding-block: 1rem;
   padding-inline: var(--px-m);
 }
-.desktop-img {
+.tablet-img {
   display: none;
 }
 
 @media screen and (min-width: 750px) {
-  .outer-container {
-    padding-inline: 3rem;
-  }
   .heading-container {
     display: flex;
-    border: #f02aa6 solid 3px;
+    margin-bottom: -30%;
   }
   .title-container {
-    max-width: 59%;
+    max-width: 53%;
   }
   .image-container {
-    border: #ff6f48 solid 4px;
+    width: 40%;
   }
   .mobile-img {
     display: none;
   }
-  .desktop-image {
+  .tablet-img {
     display: block;
+    height: 750px;
+    position: relative;
+    bottom: 13rem;
+    right: 1.5rem;
   }
   .topic-container {
     display: grid;
@@ -186,13 +187,19 @@ svg {
   .course-list-header {
     margin-top: 3rem;
   }
+  .description-text {
+    padding-inline: 0;
+  }
+  h1 {
+    padding-block: var(--px-s);
+  }
   h2 {
     padding-inline: 2rem;
     padding-top: 3rem;
     padding-bottom: 8rem;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 919px) {
   .topic-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
