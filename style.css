@@ -57,6 +57,10 @@ html {
   padding-block: 1rem;
   padding-inline: var(--px-m);
 }
+.button-header:hover {
+  cursor: pointer;
+  background-color: var(--clr-violet);
+}
 h1 {
   font-size: var(--px-l);
   font-weight: 800;
@@ -101,6 +105,10 @@ svg {
   padding-inline: 2.3rem;
   margin-top: var(--px-xl);
   margin-bottom: var(--px-m);
+}
+.button-main:hover {
+  cursor: pointer;
+  background: linear-gradient(rgba(255, 111, 72, 0.7), rgba(240, 42, 166, 0.7));
 }
 
 .mobile-img {
@@ -154,7 +162,16 @@ svg {
   padding-block: 1rem;
   padding-inline: var(--px-m);
 }
+.button-footer:hover {
+  cursor: pointer;
+
+  background: linear-gradient(rgba(72, 81, 255, 0.6), rgba(240, 42, 166, 0.6));
+}
+
 .tablet-img {
+  display: none;
+}
+.desktop-img {
   display: none;
 }
 
@@ -172,12 +189,15 @@ svg {
   .mobile-img {
     display: none;
   }
+  .desktop-img {
+    display: none;
+  }
   .tablet-img {
     display: block;
     height: 750px;
     position: relative;
-    bottom: 13rem;
-    right: 1.5rem;
+    bottom: 11rem;
+    right: 1.25rem;
   }
   .topic-container {
     display: grid;
@@ -206,5 +226,18 @@ svg {
   }
   .course-list {
     padding: 4rem;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .tablet-img {
+    display: none;
+  }
+  .desktop-img {
+    display: block;
+    height: 750px;
+    position: relative;
+    bottom: 13rem;
+    right: 1.5rem;
   }
 }
