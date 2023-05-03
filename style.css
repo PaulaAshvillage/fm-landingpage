@@ -26,56 +26,11 @@ html {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: var(--px-base);
 }
-.outer-container {
-  padding-inline: 1rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-
-  margin-top: 1rem;
-  margin-bottom: 2.5rem;
-
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--clr-dark-violet);
-}
-
-.company-name {
-  align-self: center;
-}
-.button-header {
-  font-family: inherit;
-  font-size: var(--px-xs);
-
-  color: var(--clr-white);
-
-  background-color: var(--clr-dark-violet);
-  border: none;
-  border-radius: var(--px-m);
-  padding-block: 1rem;
-  padding-inline: var(--px-m);
-}
-.button-header:hover {
-  cursor: pointer;
-  background-color: var(--clr-violet);
-}
 h1 {
   font-size: var(--px-l);
   font-weight: 800;
 
   color: var(--clr-dark-violet);
-}
-h2 {
-  background: linear-gradient(var(--clr-grad-orange), var(--clr-grad-pink));
-  color: var(--clr-white);
-
-  font-size: var(--px-s);
-
-  border-radius: 0.65rem;
-  padding-block: var(--px-s) var(--px-m);
-  padding-inline: var(--px-s);
 }
 h3 {
   font-size: var(--px-s);
@@ -86,6 +41,59 @@ svg {
   margin-top: -2rem;
   margin-bottom: 1rem;
 }
+.button {
+  font-family: inherit;
+  font-size: var(--px-xs);
+  border: none;
+
+  color: var(--clr-white);
+
+  border-radius: var(--px-m);
+  padding-block: 1rem;
+  padding-inline: var(--px-m);
+}
+.outer-container {
+  padding-inline: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  margin-left: -0.5rem;
+  padding-right: 2rem;
+  padding-block: 1rem;
+
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--clr-dark-violet);
+}
+
+.company-name {
+  align-self: center;
+}
+.button-header {
+  color: var(--clr-white);
+
+  background-color: var(--clr-dark-violet);
+}
+.button-header:hover {
+  cursor: pointer;
+  background-color: var(--clr-violet);
+}
+
+.course-list-header {
+  background: linear-gradient(var(--clr-grad-orange), var(--clr-grad-pink));
+  color: var(--clr-white);
+
+  font-size: var(--px-xs);
+
+  border-radius: 0.65rem;
+  padding-block: var(--px-m) var(--px-m);
+  padding-inline: var(--px-m) var(--px-m);
+}
 
 .description-text {
   color: var(--clr-gray);
@@ -94,12 +102,6 @@ svg {
 }
 .button-main {
   background: linear-gradient(var(--clr-grad-orange), var(--clr-grad-pink));
-  border: none;
-  border-radius: var(--px-m);
-
-  font-family: inherit;
-  font-size: inherit;
-  color: var(--clr-white);
 
   padding-block: 1rem;
   padding-inline: 2.3rem;
@@ -133,10 +135,6 @@ svg {
   font-weight: 700;
   color: var(--clr-grad-pink);
   background-color: var(--clr-white);
-  border: none;
-  margin-left: -0.5rem;
-  padding-right: 2rem;
-  padding-block: 1rem;
 }
 .footer {
   display: flex;
@@ -151,21 +149,11 @@ svg {
   font-weight: 800;
 }
 .button-footer {
-  font-family: inherit;
-  font-size: var(--px-xs);
-
-  color: var(--clr-white);
-
   background: linear-gradient(var(--clr-grad-blue), var(--clr-grad-pink));
-  border: none;
-  border-radius: var(--px-m);
-  padding-block: 1rem;
-  padding-inline: var(--px-m);
 }
 .button-footer:hover {
   cursor: pointer;
-
-  background: linear-gradient(rgba(72, 81, 255, 0.6), rgba(240, 42, 166, 0.6));
+  background: linear-gradient(rgba(72, 81, 255, 0.9), rgba(240, 42, 166, 0.9));
 }
 
 .tablet-img {
@@ -178,27 +166,23 @@ svg {
 @media screen and (min-width: 750px) {
   .heading-container {
     display: flex;
-    margin-bottom: -30%;
   }
-  .title-container {
-    max-width: 53%;
+  .tablet-img {
+    display: block;
+    width: 200%;
+    height: auto;
+    position: relative;
+    bottom: 11rem;
+    right: 1.25rem;
   }
-  .image-container {
-    width: 40%;
-  }
+
   .mobile-img {
     display: none;
   }
   .desktop-img {
     display: none;
   }
-  .tablet-img {
-    display: block;
-    height: 750px;
-    position: relative;
-    bottom: 11rem;
-    right: 1.25rem;
-  }
+
   .topic-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -224,6 +208,12 @@ svg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .heading-container {
+    min-height: 25rem;
+  }
+  .image-container {
+    width: 40%;
+  }
   .course-list {
     padding: 4rem;
   }
@@ -235,9 +225,11 @@ svg {
   }
   .desktop-img {
     display: block;
-    height: 750px;
-    position: relative;
-    bottom: 13rem;
-    right: 1.5rem;
+
+    width: 50rem;
+    height: auto;
+    position: absolute;
+    top: -4rem;
+    right: -15rem;
   }
 }
